@@ -26,10 +26,25 @@ public class GoogleSearchFieldTest {
         WebElement m = driver.findElement(By.xpath("//input[@name='q']"));
                 m.sendKeys("Brooklyn");
                 m.sendKeys(Keys.ENTER);
+        driver.findElement(By.xpath("//h3[@class='LC20lb MBeuO DKV0Md'][1]")).click();
+        driver.navigate().back();
+        driver.navigate().back();
+
+        WebElement m1 = driver.findElement(By.xpath("//input[@name='q']"));
+        m1.sendKeys("Queens");
+        m1.sendKeys(Keys.ENTER);
         driver.findElement(By.xpath("//*[@id='rso']/div[1]/div/div/div/div[1]/div/a/h3")).click();
+        driver.navigate().back();
+        driver.navigate().back();
+
+        WebElement m2 = driver.findElement(By.xpath("//input[@name='q']"));
+        m2.sendKeys("Bronx");
+        m2.sendKeys(Keys.ENTER);
+        driver.findElement(By.xpath("//h3[@class='LC20lb MBeuO DKV0Md'][1]")).click();
+        driver.navigate().back();
+        driver.navigate().back();
 
     }
-
     @AfterMethod
     public void closeBrowser(){
         driver.quit();
